@@ -1,109 +1,78 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-  }
-  
-  body {
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #f0f0f0; 
-  }
-  
-  .flag {
-	width: 100vw; 
-	height: 100vh; 
-	display: flex;
-	flex-direction: column;
-  }
-  
-  .stripe {
-	width: 100%;
-	height: 33.33vh; 
-  }
-  
-  .blue-stripe {
-	background-color: #00B5E2; 
-  }
-  
-  .red-stripe {
-	background-color: #ef3340; 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
-  
-  .green-stripe {
-	background-color: #509E2F; 
-  }
-  
-  .circle-wrapper {
-	position: relative;
-	width: 30vh; 
-	height: 30vh;
-  }
-  
-  .circle {
-	position: absolute;
-	border-radius: 50%;
-  }
-  
-  .large-circle {
-	width: 30vh;
-	height: 30vh;
-	background-color: white;
-  }
-  
-  .small-circle {
-	width: 25vh;
-	height: 25vh;
-	background-color: #ef3340;
-	position: absolute;
-	left: 5.8vh; 
-	top: 2.5vh; 
-  }
-  .star {
-	width: 0.8vw;
-	height: 0.8vw;
-	position: relative;
-	display: flex;
-	left: 15vw;
-	top: 4vw;
-	justify-content: center;
-	transform: rotate(22.5deg);
-  }
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+}
 
-  .star1 {
-	transform: rotate(0deg);
-  }
+.flag-container {
+    width: 100vw;
+    height: calc(50vw / 3);
+    position: relative;
+    background: #e00034;
+    border-top: calc(50vw / 3) solid #0097c3;
+    border-bottom: calc(50vw / 3) solid #00ae65;
+}
 
-  .star2 {
-	transform: rotate(180deg);
-	position: absolute;
-	top: 1.55vw;
-  }
+.flag-crescent {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #e00034;
+    box-shadow: -10px 0 0 7px #fff;
+}
 
-  .star1,
-  .star2 {
-	width: 0;
-	height: 0;
-	border-width: 1.6vw 1.6vw 4.5vw;
-	border-style: solid;
-	border-color: transparent white white;
-  }
+.star {
+    width: 0.8vw;
+    height: 0.8vw;
+    position: relative;
+    display: flex;
+    left: 58vw;
+    top: 5vw;
+    justify-content: center;
+    transform: rotate(22.5deg);
+}
 
-  .star1:after,
-  .star2:after {
-	content: "";
-	position: absolute;
-	width: 0;
-	height: 0;
-	top: -0.8vw;
-	left: -0.8vw;
-	border-width: 1.6vw 1.6vw 4.5vw;
-	border-style: solid;
-	border-color: transparent white white;
-	transform: rotate(90deg);
-  }
+.star1 {
+    transform: rotate(0deg);
+}
+
+.star2 {
+    transform: rotate(180deg);
+    position: absolute;
+    top: 1.55vw;
+}
+
+.star1,
+.star2 {
+    width: 0;
+    height: 0;
+    border-width: 1.6vw 1.6vw 4.5vw;
+    border-style: solid;
+    border-color: transparent white white;
+}
+
+.star1:after,
+.star2:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -0.8vw;
+    left: -0.8vw;
+    border-width: 1.6vw 1.6vw 4.5vw;
+    border-style: solid;
+    border-color: transparent white white;
+    transform: rotate(90deg);
+}
+
+.flag-star::after {
+    transform: rotate(90deg);
+}
